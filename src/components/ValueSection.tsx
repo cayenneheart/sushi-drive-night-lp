@@ -73,12 +73,22 @@ function ValueItem({
 
         {/* Heading */}
         <h2 className="font-serif text-3xl leading-tight text-[#F5F0E8] sm:text-4xl">
-          {heading}
+          {heading.split("\n").map((line, i, arr) => (
+            <span key={i}>
+              {line}
+              {i < arr.length - 1 && <br />}
+            </span>
+          ))}
         </h2>
 
         {/* Body */}
         <p className="max-w-md text-base leading-relaxed text-[#A0998C]">
-          {body}
+          {body.split("\n").map((line, i, arr) => (
+            <span key={i}>
+              {line}
+              {i < arr.length - 1 && <br />}
+            </span>
+          ))}
         </p>
       </motion.div>
     </div>

@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Inter, Cormorant_Garamond, Noto_Serif_JP } from "next/font/google";
+import { Inter, Cormorant_Garamond, Shippori_Mincho_B1 } from "next/font/google";
 import "./globals.css";
 
 const inter = Inter({
@@ -13,8 +13,8 @@ const cormorant = Cormorant_Garamond({
   weight: ["400", "500", "600", "700"],
 });
 
-const notoSerifJP = Noto_Serif_JP({
-  variable: "--font-noto-serif-jp",
+const shipporiMincho = Shippori_Mincho_B1({
+  variable: "--font-shippori",
   subsets: ["latin"],
   weight: ["400", "500", "700"],
 });
@@ -47,7 +47,7 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-      className={`${inter.variable} ${cormorant.variable} ${notoSerifJP.variable} antialiased`}
+      className={`${inter.variable} ${cormorant.variable} ${shipporiMincho.variable} antialiased`}
     >
       <body>{children}</body>
     </html>

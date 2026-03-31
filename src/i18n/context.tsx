@@ -1,6 +1,6 @@
 "use client";
 
-import { createContext, useContext, useState, useCallback, type ReactNode } from "react";
+import { createContext, useContext, useState, useCallback, useEffect, type ReactNode } from "react";
 import { translations, type Locale } from "./translations";
 
 type Translations = (typeof translations)[Locale];
@@ -19,6 +19,10 @@ export function TranslationProvider({ children }: { children: ReactNode }) {
   const toggleLocale = useCallback(() => {
     setLocale((prev) => (prev === "en" ? "ja" : "en"));
   }, []);
+
+  useEffect(() => {
+    document.documentElement.lang = locale;
+  }, [locale]);
 
   const t = translations[locale];
 

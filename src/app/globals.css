@@ -3,6 +3,7 @@
 @theme inline {
   --font-sans: var(--font-inter);
   --font-serif: var(--font-cormorant);
+  --font-serif-jp: var(--font-shippori);
 }
 
 :root {
@@ -43,6 +44,21 @@ body {
 ::-webkit-scrollbar-thumb {
   background: var(--gold);
   border-radius: 2px;
+}
+
+/* Japanese typography */
+[lang="ja"] {
+  word-break: keep-all;
+  overflow-wrap: anywhere;
+}
+
+[lang="ja"] .font-serif {
+  font-family: var(--font-serif-jp), var(--font-serif), serif;
+}
+
+[lang="ja"] h1,
+[lang="ja"] h2 {
+  text-wrap: balance;
 }
 
 /* Selection */
