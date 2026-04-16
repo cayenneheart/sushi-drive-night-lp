@@ -23,6 +23,9 @@ const shipporiMincho = Shippori_Mincho_B1({
 
 export const metadata: Metadata = {
   metadataBase: new URL(BASE_URL),
+  verification: {
+    google: "wvSxrl2HJxauzJLnW56MRJag8RV5OTihUzemi3H0S-w",
+  },
   title: {
     default: "SusHi Drive Night | SusHi Tech Tokyo 2026 Side Event",
     template: "%s | SusHi Drive Night",
